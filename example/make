@@ -1,0 +1,12 @@
+CC = cc
+LIBS = -ll
+LEX = lex
+YACC = yacc
+CFLAGS = -DYYDEBUG=1
+all: speech
+speech: y.tab.c lex.yy.c
+                $(CC) -o speech y.tab.c lex.yy.c $(LIBS)
+y.tab.c: example.yacc
+                $(YACC) -d example.yacc
+lex.yy.c : example.lex
+                $(LEX) example.lex
