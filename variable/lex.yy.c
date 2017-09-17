@@ -655,7 +655,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 7 "variable.lex"
+#line 8 "variable.lex"
 
 #line 661 "lex.yy.c"
 
@@ -742,38 +742,38 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 8 "variable.lex"
+#line 9 "variable.lex"
 {
                   yylval.dval = atof(yytext); return NUMBER;
                 }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 11 "variable.lex"
+#line 12 "variable.lex"
 ;        /* ignore white space */
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 12 "variable.lex"
+#line 13 "variable.lex"
 {      yylval.vblno = yytext[0] - 'a'; return NAME; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 13 "variable.lex"
+#line 14 "variable.lex"
 { return 0; }    /*  end of input  */
 	YY_BREAK
 case 5:
 /* rule 5 can match eol */
-#line 15 "variable.lex"
+#line 16 "variable.lex"
 case 6:
 /* rule 6 can match eol */
 YY_RULE_SETUP
-#line 15 "variable.lex"
+#line 16 "variable.lex"
 return yytext[0];
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 16 "variable.lex"
+#line 17 "variable.lex"
 ECHO;
 	YY_BREAK
 #line 780 "lex.yy.c"
@@ -1774,7 +1774,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 16 "variable.lex"
+#line 17 "variable.lex"
 
 
 

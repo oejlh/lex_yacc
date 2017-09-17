@@ -1,21 +1,24 @@
 %{
 double vbltable[26];
 %}
+
 %union  {
-                double dval;
-                int vblno;
-        }
+        double dval;
+        int vblno;
+}
+
 %token    <vblno> NAME
 %token    <dval> NUMBER
 %left '-' '+'
 %left '*' '/'
 %nonassoc UMINUS
-%type <dval> expression
 
+%type <dval> expression
 %%
 statement_list: statement '\n'
           |         statement_list statement '\n'
           ;
+
 statement:        NAME '=' expression  { vbltable[$1] = $3; }
           |   expression                 { printf("= %g\n",$1); }
           ;
@@ -33,8 +36,3 @@ expression: expression '+' expression  { $$ = $1 + $3;  }
            |       NAME       { $$ = vbltable[$1]; }
            ;
 %%
-
-main()
-{
-    yyparse();
-}

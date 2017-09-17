@@ -116,13 +116,12 @@ extern int yydebug;
 typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
-#line 4 "variable.yacc" /* yacc.c:355  */
+#line 5 "variable.yacc" /* yacc.c:355  */
 
-                double dval;
-                int vblno;
-        
+        double dval;
+        int vblno;
 
-#line 126 "y.tab.c" /* yacc.c:355  */
+#line 125 "y.tab.c" /* yacc.c:355  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
@@ -137,7 +136,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 141 "y.tab.c" /* yacc.c:358  */
+#line 140 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -435,8 +434,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    16,    16,    17,    19,    20,    22,    23,    24,    25,
-      30,    31,    32,    33
+       0,    18,    18,    19,    22,    23,    25,    26,    27,    28,
+      33,    34,    35,    36
 };
 #endif
 
@@ -1218,64 +1217,64 @@ yyreduce:
   switch (yyn)
     {
         case 4:
-#line 19 "variable.yacc" /* yacc.c:1646  */
+#line 22 "variable.yacc" /* yacc.c:1646  */
     { vbltable[(yyvsp[-2].vblno)] = (yyvsp[0].dval); }
-#line 1224 "y.tab.c" /* yacc.c:1646  */
+#line 1223 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 20 "variable.yacc" /* yacc.c:1646  */
+#line 23 "variable.yacc" /* yacc.c:1646  */
     { printf("= %g\n",(yyvsp[0].dval)); }
-#line 1230 "y.tab.c" /* yacc.c:1646  */
+#line 1229 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 22 "variable.yacc" /* yacc.c:1646  */
+#line 25 "variable.yacc" /* yacc.c:1646  */
     { (yyval.dval) = (yyvsp[-2].dval) + (yyvsp[0].dval);  }
-#line 1236 "y.tab.c" /* yacc.c:1646  */
+#line 1235 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 23 "variable.yacc" /* yacc.c:1646  */
+#line 26 "variable.yacc" /* yacc.c:1646  */
     { (yyval.dval) = (yyvsp[-2].dval) - (yyvsp[0].dval);  }
-#line 1242 "y.tab.c" /* yacc.c:1646  */
+#line 1241 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 24 "variable.yacc" /* yacc.c:1646  */
+#line 27 "variable.yacc" /* yacc.c:1646  */
     { (yyval.dval) = (yyvsp[-2].dval) * (yyvsp[0].dval);  }
-#line 1248 "y.tab.c" /* yacc.c:1646  */
+#line 1247 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 26 "variable.yacc" /* yacc.c:1646  */
+#line 29 "variable.yacc" /* yacc.c:1646  */
     {  if((yyvsp[0].dval) == 0.0)
                              yyerror("divide by zero");
                        else   (yyval.dval) = (yyvsp[-2].dval) /(yyvsp[0].dval);
                     }
-#line 1257 "y.tab.c" /* yacc.c:1646  */
+#line 1256 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 30 "variable.yacc" /* yacc.c:1646  */
+#line 33 "variable.yacc" /* yacc.c:1646  */
     { (yyval.dval) = -(yyvsp[0].dval); }
-#line 1263 "y.tab.c" /* yacc.c:1646  */
+#line 1262 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 31 "variable.yacc" /* yacc.c:1646  */
+#line 34 "variable.yacc" /* yacc.c:1646  */
     { (yyval.dval) = (yyvsp[-1].dval); }
-#line 1269 "y.tab.c" /* yacc.c:1646  */
+#line 1268 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 33 "variable.yacc" /* yacc.c:1646  */
+#line 36 "variable.yacc" /* yacc.c:1646  */
     { (yyval.dval) = vbltable[(yyvsp[0].vblno)]; }
-#line 1275 "y.tab.c" /* yacc.c:1646  */
+#line 1274 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1279 "y.tab.c" /* yacc.c:1646  */
+#line 1278 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1503,10 +1502,5 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 35 "variable.yacc" /* yacc.c:1906  */
+#line 38 "variable.yacc" /* yacc.c:1906  */
 
-
-main()
-{
-    yyparse();
-}
